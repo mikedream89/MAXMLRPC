@@ -44,6 +44,7 @@ public class Call {
 	 * @throws XMLRPCException Will be thrown whenever the xml representation cannot
 	 * 		be build without errors.
 	 * @see XMLRPCClient
+	 * @param debugMode An boolean
 	 */
 	public String getXML(boolean debugMode) throws XMLRPCException {
 
