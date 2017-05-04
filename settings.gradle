@@ -1,1 +1,1 @@
-include ':app', ':xmlrpc'
+include ':app', ':xmlrpc', ':jiso8601'

@@ -7,7 +7,7 @@ import org.w3c.dom.Element;
 import de.timroes.axmlrpc.XMLRPCException;
 import de.timroes.axmlrpc.XMLUtil;
 import de.timroes.axmlrpc.xmlcreator.XmlElement;
-//import fr.turri.jiso8601.Iso8601Deserializer;
+import fr.turri.jiso8601.Iso8601Deserializer;
 
 /**
  *
@@ -25,8 +25,8 @@ public class DateTimeSerializer implements Serializer {
 
 	public Object deserialize(String dateStr) throws XMLRPCException {
 		try {
-			return DATE_FORMATER.parse(dateStr);
-//			return Iso8601Deserializer.toDate(dateStr);
+//			return DATE_FORMATER.parse(dateStr);
+			return Iso8601Deserializer.toDate(dateStr);
 		} catch (Exception ex) {
 			throw new XMLRPCException("Unable to parse given date.", ex);
 		}
